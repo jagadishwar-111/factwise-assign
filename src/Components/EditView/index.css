@@ -1,0 +1,37 @@
+.edit-modal{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#ffffff;
+}
+
+.edit-modal-card{
+    min-width:250px;
+    width:40%;
+    border:1px solid gray;
+    padding:20px;
+    border-radius:8px;
+
+
+}
+
+
+.icon-save-button{
+    font-size:22px;
+    color:green;
+    background:transparent;
+    border:0px;
+    cursor:pointer;
+}
+
+.icon-not-save-button{
+    font-size:22px;
+    color:rgb(230, 61, 61);
+    background:transparent;
+    border:0px;
+    cursor:pointer;
+}
+
