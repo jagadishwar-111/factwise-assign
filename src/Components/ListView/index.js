@@ -119,7 +119,7 @@ const ListView = () => {
         
         getSearchData()
       
-    }, [searchValue]);
+    }, [searchValue,getSearchData]);
 
     return (
         <div className="home-container">
