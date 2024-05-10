@@ -19,9 +19,7 @@ const ListView = () => {
     };
 
     const handleAddData = async (obj) => {
-        if (Object.entries(obj).length === 0) {
-            setShowAddData(false);
-        } else {
+        try {
             const url = 'http://localhost:3001/celebrities/add';
             const options = {
                 method: 'POST',
@@ -35,6 +33,8 @@ const ListView = () => {
             alert(data);
             setShowAddData(false);
             getCelebritiesData();
+        } catch (error) {
+            console.error('Error adding data:', error);
         }
     };
 
@@ -45,7 +45,7 @@ const ListView = () => {
             const data = await response.json();
             setCelebritiesData(data.rows || []);
         } catch (error) {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching search data:', error);
         } finally {
             setIsLoading(false);
         }
@@ -96,7 +96,7 @@ const ListView = () => {
             const data = await response.json();
             setCelebritiesData(data.rows || []);
         } catch (error) {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching celebrities data:', error);
         } finally {
             setIsLoading(false);
         }
